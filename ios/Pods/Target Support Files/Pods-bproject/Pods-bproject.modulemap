@@ -1,0 +1,6 @@
+module Pods_bproject {
+  umbrella header "Pods-bproject-umbrella.h"
+
+  export *
+  module * { export * }
+}
