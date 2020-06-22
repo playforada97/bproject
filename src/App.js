@@ -1,20 +1,24 @@
-import 'react-native-gesture-handler';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import {createDrawerNavigator} from 'react-navigation-drawer';
 import HomeScreen from "./components/HomeScreen";
 import ListScreen from './components/ListScreen';
+import SettingScreen from './components/SettingScreen';
 
-const navigator = createStackNavigator(
+const navigator = createDrawerNavigator(
   {
-    Home: HomeScreen,
-    List: ListScreen
+    Home: {screen: HomeScreen},
+    Menu: {screen: ListScreen},
+    Settings: {screen: SettingScreen},
   },
   {
-    initialRouteName: "Home",
-    defaultNavigationOptions: {
-      title: "App"
-    }
+    initialRouteName: 'Home',
+    // defaultNavigationOptions: {
+    //   title: "App"
+    // }
   }
 );
 
-export default createAppContainer(navigator);
+const App = createAppContainer(navigator);
+
+export default App;

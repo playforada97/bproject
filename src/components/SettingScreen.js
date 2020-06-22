@@ -5,7 +5,7 @@ import firebase from 'firebase';
 import LoginScreen from './LoginScreen';
 import ListScreen from './ListScreen';
 
-class HomeScreen extends Component {
+class SettingScreen extends Component {
   render() {
     return(
       <Container>
@@ -20,16 +20,16 @@ class HomeScreen extends Component {
           </Body>
           <Right />
         </Header>
-        <Content contentContainerStyle={{
+		<Content contentContainerStyle={{
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center'
         }}>
-			    <Text>Home Screen</Text>
-		    </Content>
+			<Text>Setting Screen</Text>
+		</Content>
       </Container>
     );
   }
 }
 
-export default HomeScreen;
+export default SettingScreen;
