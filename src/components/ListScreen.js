@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, StyleSheet, FlatList} from 'react-native';
-import { Container, Header, Content, List, ListItem, Left, Body, Button, Title, Right} from 'native-base';
+import { Container, Header, Content, List, ListItem, Left, Body, Button, Title, Right,Icon} from 'native-base';
 
 const ListScreen = () => {
   const tdata = [
@@ -16,7 +16,7 @@ const ListScreen = () => {
     <Header>
           <Left>
             <Button transparent>
-              {/* <Icon name='menu' /> */}
+              <Icon name='menu' />
             </Button>
           </Left>
           <Body>

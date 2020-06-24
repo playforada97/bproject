@@ -12,7 +12,7 @@ class SettingScreen extends Component {
         <Header>
           <Left>
             <Button transparent>
-              {/* <Icon name='menu' /> */}
+              <Icon name='menu' />
             </Button>
           </Left>
           <Body>
