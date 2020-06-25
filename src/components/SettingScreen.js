@@ -3,16 +3,15 @@ import {View, Text, StyleSheet} from 'react-native';
 import {Container, Header, Content, Left, Icon, Body, Button, Title, Right} from 'native-base';
 import firebase from 'firebase';
 import LoginScreen from './LoginScreen';
-import ListScreen from './ListScreen';
+import MenuScreen from './MenuScreen';
 
-class SettingScreen extends Component {
-  render() {
+const SettingScreen = ({navigation}) => {
     return(
       <Container>
         <Header>
           <Left>
-            <Button transparent>
-              {/* <Icon name='menu' /> */}
+            <Button transparent onPress={() => navigation.openDrawer()}>
+              <Icon name='menu' />
             </Button>
           </Left>
           <Body>
@@ -30,6 +29,5 @@ class SettingScreen extends Component {
       </Container>
     );
   }
-}
 
 export default SettingScreen;
