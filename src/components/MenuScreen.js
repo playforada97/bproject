@@ -1,24 +1,11 @@
 import React from 'react';
-import {Text, StyleSheet, FlatList} from 'react-native';
-import { createStackNavigator } from 'react-navigation-stack';
-import { StackNavigator } from "react-navigation";
-import {NavigationContainer} from '@react-navigation/native';
-import { Container, Header, Content, List, ListItem, Left, Body, Button, Title, Right,Icon} from 'native-base';
-import Appetizers from '../Menu/Appetizers';
+import {Text, StyleSheet, } from 'react-native';
+import { Container, Content, List, ListItem, Left, Button, Right,Icon} from 'native-base';
+
 const MenuScreen = ({navigation}) => {
+  console.log('navigation',navigation);
   return (
     <Container>
-    <Header>
-          <Left>
-            <Button transparent onPress={() => navigation.openDrawer()}>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title> Menu</Title>
-          </Body>
-          <Right />
-        </Header>
         <Content>
           <List>
             <ListItem >
@@ -26,7 +13,16 @@ const MenuScreen = ({navigation}) => {
                 <Text>Appetizers</Text>
               </Left>
               <Right>
-              <Button transparent onPress={() => navigation.navigate('Appetizers')}>
+              <Button 
+                transparent 
+                onPress={() => {
+                  navigation.navigate('Detail', {
+                    title: 'Appetizers',
+                    body: 'Appetizers Body'
+                    //we can pass a new component in body
+                  })
+                }}
+              > 
                 <Icon name="arrow-forward" />
                 </Button>
               </Right>
@@ -36,7 +32,16 @@ const MenuScreen = ({navigation}) => {
                 <Text>Main Couse</Text>
               </Left>
               <Right>
-                <Button transparent>
+                <Button 
+                transparent 
+                onPress={() => {
+                  navigation.navigate('Detail', {
+                    title: 'Main Couse',
+                    body: 'Main Couse Body'
+                    //we can pass a new component in body
+                  })
+                }}
+              > 
                 <Icon name="arrow-forward" />
                 </Button>
               </Right>
@@ -46,37 +51,73 @@ const MenuScreen = ({navigation}) => {
                 <Text>Biryanis</Text>
               </Left>
               <Right>
-                <Button transparent>
+              <Button 
+                transparent 
+                onPress={() => {
+                  navigation.navigate('Detail', {
+                    title: 'Biryanis',
+                    body: 'Biryanis Body'
+                    //we can pass a new component in body
+                  })
+                }}
+              > 
                 <Icon name="arrow-forward" />
                 </Button>
               </Right>
             </ListItem>
             <ListItem>
               <Left>
-                <Text> Rice & Noodles</Text>
+                <Text>Rice & Noodles</Text>
               </Left>
               <Right>
-                <Button transparent>
+              <Button 
+                transparent 
+                onPress={() => {
+                  navigation.navigate('Detail', {
+                    title: 'Rice & Noodles',
+                    body: 'Rice & Noodles Body'
+                    //we can pass a new component in body
+                  })
+                }}
+              > 
                 <Icon name="arrow-forward" />
                 </Button>
               </Right>
             </ListItem>
             <ListItem>
               <Left>
-                <Text> Roti</Text>
+                <Text>Roti</Text>
               </Left>
               <Right>
-                <Button transparent>
+              <Button 
+                transparent 
+                onPress={() => {
+                  navigation.navigate('Detail', {
+                    title: 'Roti',
+                    body: 'Roti Body'
+                    //we can pass a new component in body
+                  })
+                }}
+              >
                 <Icon name="arrow-forward" />
                 </Button>
               </Right>
             </ListItem>
             <ListItem>
               <Left>
-                <Text>Deserts </Text>
+                <Text>Deserts</Text>
               </Left>
               <Right>
-                <Button transparent>
+              <Button 
+                transparent 
+                onPress={() => {
+                  navigation.navigate('Detail', {
+                    title: 'Deserts',
+                    body: 'Deserts Body'
+                    //we can pass a new component in body
+                  })
+                }}
+              >
                 <Icon name="arrow-forward" />
                 </Button>
               </Right>
@@ -92,13 +133,4 @@ const styles = StyleSheet.create({
 	  flex: 1,
 	}
   });
-
-      // <FlatList
-		// style={{paddingLeft: 40, margin: 20}}
-		// data={tdata}
-    //   	renderItem={({item}) => {
-		// 	  console.log('item',item);
-    //     	return <Text style={{padding: 10}}>{item.name}</Text>
-    //  	 }}
-    // />
 export default MenuScreen;
