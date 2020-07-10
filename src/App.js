@@ -7,10 +7,10 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {Icon} from 'native-base';
 
-import HomeScreen from "./components/HomeScreen";
-import MenuScreen from './components/MenuScreen';
-import SettingScreen from './components/SettingScreen';
-import DetailScreen from './Menu/DetailScreen';
+import HomeScreen from "./screens/HomeScreen";
+import MenuScreen from './screens/MenuScreen';
+import SettingScreen from './screens/SettingScreen';
+import DetailScreen from './components/DetailScreen';
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 
-import FormField from './FormField';
+import FormField from '../components/FormField';
 
 const LoginScreen = () => {
   return (

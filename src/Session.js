@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import firebase from 'firebase';
-import LoginScreen from './components/LoginScreen';
+import LoginScreen from './screens/LoginScreen';
 import App from './App';
 
 class Session extends React.Component{
