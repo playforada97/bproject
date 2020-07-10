@@ -12,12 +12,12 @@ import {
 } from "native-base";
 
 const Items = [
-   {'title': 'Appetizers', 'body': 'Appetizers Body'},
-   {'title': 'Main Couse', 'body': 'Main Couse Body'},
-   {'title': 'Biryanis', 'body': 'Biryanis Body'},
-   {'title': 'Rice & Noodles', 'body': 'Rice & Noodles Body'},
-   {'title': 'Roti', 'body': 'Roti Body'},
-   {'title': 'Deserts', 'body': 'Deserts Body'},
+   {'title': 'Appetizers', 'body': ['Appetizersitem1', 'Appetizersitem2', 'Appetizersitem3']},
+   {'title': 'Main Couse', 'body': ['Mainitem1', 'Mainitem2', 'Mainitem3']},
+   {'title': 'Biryanis', 'body': ['Biryanisitem1', 'Biryanisitem2', 'Biryanisitem3']},
+   {'title': 'Rice & Noodles', 'body': ['Riceitem1', 'Riceitem2', 'Riceitem3']},
+   {'title': 'Roti', 'body': ['Rotiitem1', 'Rotiitem2', 'Rotiitem3']},
+   {'title': 'Deserts', 'body': ['Desertsitem1', 'Desertsitem2', 'Desertsitem3']},
 ];
 
 const MenuScreen = ({ navigation }) => {
