@@ -28,6 +28,28 @@ const HeaderLeft = () => {
   );
 };
 
+const HeaderRight = () => {
+  const navigation = useNavigation();
+  return (
+    <View style={{ padding: 5}}>
+      {/* <TouchableOpacity
+        onPress={() => {
+          alert('Open cart');
+        }}> */}
+        <View style={{
+          position: 'absolute', height: 30, width: 30,
+          borderRadius: 15, backgroundColor: 'rgba(95,197,123,0.8)',
+          right: 15, bottom: 15, alignItems: 'center',
+          justifyContent: 'center', zIndex: 2000
+        }}>
+          <Text>0</Text>
+        </View>
+        <Icon name='cart' size={30}/>
+      {/* </TouchableOpacity> */}
+    </View>
+  );
+};
+
 const Drawer = createDrawerNavigator();
 
 const HomeStack = createStackNavigator();
@@ -35,13 +57,13 @@ const MenuStack = createStackNavigator();
 
 const HomeStackScreen = () => (
   <HomeStack.Navigator>
-    <HomeStack.Screen name="Home" component={HomeScreen} options={{ headerLeft: ({}) => <HeaderLeft /> }} />
+    <HomeStack.Screen name="Home" component={HomeScreen} options={{ headerLeft: () => <HeaderLeft />, headerRight: () => <HeaderRight /> }} />
   </HomeStack.Navigator>
 )
 
 const MenuStackScreen = () => (
   <MenuStack.Navigator>
-    <MenuStack.Screen name="Menu" component={MenuScreen} options={{ headerLeft: ({}) => <HeaderLeft /> }} />
+    <MenuStack.Screen name="Menu" component={MenuScreen} options={{ headerLeft: () => <HeaderLeft />, headerRight: () => <HeaderRight /> }} />
     <MenuStack.Screen name="Detail" component={DetailScreen} />
   </MenuStack.Navigator>
 )
