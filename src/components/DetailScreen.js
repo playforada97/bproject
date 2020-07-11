@@ -23,6 +23,9 @@ const DetailScreen = ({ route, navigation}) => {
         <Left>
           <Text>{item}</Text>
         </Left>
+        <Right>
+          <Text>$4.99</Text>
+        </Right>
       </ListItem>
       );
     });

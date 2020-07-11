@@ -22,7 +22,7 @@ const HeaderLeft = () => {
         onPress={() => {
           navigation.dispatch(DrawerActions.openDrawer());
         }}>
-        <Icon name='menu'  style = {{paddingLeft : 16, color: '#1e90ff'}}/>
+        <Icon name='menu' style = {{paddingLeft : 16,fontSize:40, color: '#1e90ff'}}/>
       </TouchableOpacity>
     </View>
   );
@@ -44,7 +44,7 @@ const HeaderRight = () => {
         }}>
           <Text>0</Text>
         </View>
-        <Icon name='cart' size={30}/>
+        <Icon name='cart' style = {{fontSize:30,}}/>
       {/* </TouchableOpacity> */}
     </View>
   );
@@ -64,7 +64,7 @@ const HomeStackScreen = () => (
 const MenuStackScreen = () => (
   <MenuStack.Navigator>
     <MenuStack.Screen name="Menu" component={MenuScreen} options={{ headerLeft: () => <HeaderLeft />, headerRight: () => <HeaderRight /> }} />
-    <MenuStack.Screen name="Detail" component={DetailScreen} />
+    <MenuStack.Screen name="Detail" component={DetailScreen} options={{ headerRight: () => <HeaderRight /> }}/>
   </MenuStack.Navigator>
 )
 
