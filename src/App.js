@@ -22,7 +22,7 @@ const HeaderLeft = () => {
         onPress={() => {
           navigation.dispatch(DrawerActions.openDrawer());
         }}>
-        <Icon name='menu' />
+        <Icon name='menu'  style = {{paddingLeft : 16, color: '#1e90ff'}}/>
       </TouchableOpacity>
     </View>
   );

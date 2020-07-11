@@ -25,23 +25,20 @@ const MenuScreen = ({ navigation }) => {
   getListItem = () => {
     let lItem = Items.map((item) => {
       return (
-        <ListItem>
+        <ListItem selected Button
+        transparent
+        onPress={() => {
+          navigation.navigate("Detail", {
+            title: item.title,
+            body: item.body,
+            //we can pass a new component in body
+          });
+        }} >
         <Left>
           <Text>{item.title}</Text>
         </Left>
         <Right>
-          <Button
-            transparent
-            onPress={() => {
-              navigation.navigate("Detail", {
-                title: item.title,
-                body: item.body,
-                //we can pass a new component in body
-              });
-            }}
-          >
             <Icon name="arrow-forward" />
-          </Button>
         </Right>
       </ListItem>
       );
