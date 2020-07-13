@@ -19,7 +19,6 @@ class FormField extends React.Component {
   }
 
   componentDidMount() {
-	console.log('componentDidMount from FormFiel');
   }
 
   onButtonPress = () => {
@@ -33,8 +32,6 @@ class FormField extends React.Component {
 
   render() {
 	  const {name} = this.props;
-	  console.log('props', this.props);
-	  console.log('name', name);
     return (
       <View style={styles.emailAndpassword}>
         <TextInput
