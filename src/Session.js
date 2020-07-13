@@ -1,4 +1,6 @@
 import React from 'react';
+import { Provider }  from 'react-redux';
+import store from './state/store';
 import {View, Text, StyleSheet} from 'react-native';
 import firebase from 'firebase';
 import LoginScreen from './screens/LoginScreen';
@@ -13,7 +15,6 @@ class Session extends React.Component{
 	  }
 	
 	  componentDidMount() {
-		console.log('componentDidMount from HomeScreen');
 		var firebaseConfig = {
 		  apiKey: 'AIzaSyBmiuErzygLsiPrjqAo0sSJJ8ghzyu1uhs',
 		  authDomain: 'bproject-5daee.firebaseapp.com',
@@ -48,7 +49,7 @@ class Session extends React.Component{
 	  };
 	
 	  render() {
-		return <View style={styles.container}>{this.renderPage()}</View>;
+		return <Provider store={store}><View style={styles.container}>{this.renderPage()}</View></Provider>;
 	  }
 }
 
