@@ -19,7 +19,6 @@ class FormField extends React.Component {
   }
 
   componentDidMount() {
-	console.log('componentDidMount from FormFiel');
   }
 
   onButtonPress = () => {
@@ -33,26 +32,25 @@ class FormField extends React.Component {
 
   render() {
 	  const {name} = this.props;
-	  console.log('props', this.props);
-	  console.log('name', name);
     return (
       <View style={styles.emailAndpassword}>
         <TextInput
-          placeholder="email"
+          placeholder="Username/Email"
           style={styles.input}
           value={this.state.email}
           onChangeText={email => this.setState({email})}
         />
 
 		<TextInput
-          placeholder="password"
+          placeholder="Password"
           style={styles.input}
           value={this.state.password}
+          secureTextEntry={true}
           onChangeText={password => this.setState({password})}
         />
 		
         <TouchableOpacity onPress={() => {this.onButtonPress}}>
-          <Text>Login</Text>
+          <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
       </View>
     );
@@ -65,11 +63,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
+    borderColor: '#2f4f4f',
+    borderWidth: 2,
+    borderRadius: 25,
+    width: 300,
+    paddingHorizontal: 20,
+    marginVertical: 10,
     height: 40,
     paddingLeft: 10,
     marginBottom: 15,
-    borderRadius: 5,
-	fontSize: 15,
+	  fontSize: 15,
+  },
+  buttonText: {
+    marginVertical: 20,
+    fontWeight: '600',
+    fontSize: 16,
   },
 });
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Connect, connect } from 'react-redux';
+
 import {Text, StyleSheet} from 'react-native';
 import {
   Container,
@@ -11,18 +13,24 @@ import {
   Icon,
 } from "native-base";
 
-const DetailScreen = ({ route, navigation}) => {
-  const { title, body } = route.params;
-  navigation.setOptions({ title });
+const DetailScreen = (props) => {
+  const { route, navigation} = props;
+  // navigation.setOptions({ title });
 
   getListItem = () => {
-    const { title, body } = route.params;
-    let lItem = body.map((item) => {
+    console.log();
+    const { route} = props;
+    const { item } = route.params;
+    console.log(item);
+    let lItem = item.map((i) => {
       return (
-        <ListItem>
+        <ListItem onPress={() => props.addItemToCart(i)}>
         <Left>
-          <Text>{item}</Text>
+          <Text>{i.name}</Text>
         </Left>
+        <Right>
+          <Text>{i.price}</Text>
+        </Right>
       </ListItem>
       );
     });
@@ -40,10 +48,11 @@ const DetailScreen = ({ route, navigation}) => {
   );
 };
 
-const styles = StyleSheet.create({
-	list: {
-	  flex: 1,
-	}
-  });
+const mapDispatchTpProps = (dispatch) => {
+  return {
+    addItemToCart: (item) => dispatch({type:
+      'ADD_TO_CART', payload: item})
+  }
+}
 
-export default DetailScreen;
+export default connect(null, mapDispatchTpProps)(DetailScreen);
