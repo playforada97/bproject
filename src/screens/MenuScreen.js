@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet,Image } from "react-native";
 import {
   Container,
   Content,
@@ -13,15 +13,50 @@ import {
 
 const Items = [
    {'title': 'Appetizers', 'item': [ 
+    {name: 'ONION PAKORA', price: '$6.50', image: require('../Appetizer_images/onion_pakoda.png'), note:'Its Onion Pakora'},
+    {name: 'VEG MANCHURIAN', price: '$6.50', image: require('../Appetizer_images/veg-manchurian.png')},
+    {name: 'GOBI MANCHURIAN', price: '$6.50', image: require('../Appetizer_images/veg-manchurian.png')},
+    {name: 'GINGER VEGETABLE', price: '$6.50', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'PANEER TIKKA', price: '$8.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'VEGETABLE CUTLET (3P)', price: '$6.50', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'CHICKEN PAKORA', price: '$6.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'CHICKEN MANCHURIAN', price: '$7.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'CHILLY CHICKEN', price: '$7.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'GINGER CHICKEN', price: '$7.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'FISH FRY', price: '$8.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'SHRIMP FRY', price: '$8.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'CHILLY SHRIMP', price: '$8.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'CHICKEN 65', price: '$7.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'MUTTON FRY', price: '$9.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'MUTTON ROAST', price: '$9.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'MUTTON MUNCHURIA', price: '$9.95', image: require('../Appetizer_images/veg-manchurian.png')},
+     {name: 'GINGER MUTTON', price: '$9.95', image: require('../Appetizer_images/veg-manchurian.png')},
+  ]},
+    {'title': 'Main Couse', 'item': [ 
      {name: 'Appetizersitem1', price: '10.99'},
      {name: 'Appetizersitem2', price: '1.99'},
      {name: 'Appetizersitem3', price: '20.99'},
   ]},
-  //  {'title': 'Main Couse', 'body': ['Mainitem1', 'Mainitem2', 'Mainitem3']},
-  //  {'title': 'Biryanis', 'body': ['Biryanisitem1', 'Biryanisitem2', 'Biryanisitem3']},
-  //  {'title': 'Rice & Noodles', 'body': ['Riceitem1', 'Riceitem2', 'Riceitem3']},
-  //  {'title': 'Roti', 'body': ['Rotiitem1', 'Rotiitem2', 'Rotiitem3']},
-  //  {'title': 'Deserts', 'body': ['Desertsitem1', 'Desertsitem2', 'Desertsitem3']},
+  {'title': 'Biryanis', 'item': [ 
+     {name: 'Appetizersitem1', price: '10.99'},
+     {name: 'Appetizersitem2', price: '1.99'},
+     {name: 'Appetizersitem3', price: '20.99'},
+  ]},
+    {'title': 'Rice & Noodles', 'item': [ 
+     {name: 'Appetizersitem1', price: '10.99'},
+     {name: 'Appetizersitem2', price: '1.99'},
+     {name: 'Appetizersitem3', price: '20.99'},
+  ]},
+   {'title': 'Roti', 'item': [ 
+     {name: 'Appetizersitem1', price: '10.99'},
+     {name: 'Appetizersitem2', price: '1.99'},
+     {name: 'Appetizersitem3', price: '20.99'},
+  ]},
+    {'title': 'Deserts', 'item': [ 
+     {name: 'Appetizersitem1', price: '10.99'},
+     {name: 'Appetizersitem2', price: '1.99'},
+     {name: 'Appetizersitem3', price: '20.99'},
+  ]},
 ];
 
 const MenuScreen = ({ navigation }) => {

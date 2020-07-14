@@ -10,26 +10,34 @@ import {
   Left,
   Button,
   Right,
+  Thumbnail,
   Icon,
+  Body,
+  H3,
 } from "native-base";
 
 const DetailScreen = (props) => {
   const { route, navigation} = props;
-  // navigation.setOptions({ title });
+  //navigation.setOptions({ title });
 
   getListItem = () => {
-    console.log();
+   // console.log();
     const { route} = props;
     const { item } = route.params;
     console.log(item);
     let lItem = item.map((i) => {
       return (
-        <ListItem onPress={() => props.addItemToCart(i)}>
+        <ListItem thumbnail >
         <Left>
-          <Text>{i.name}</Text>
+        <Thumbnail square source={i.image} />
         </Left>
+        <Body>
+          <Text>{i.name}</Text>
+          <Text note style ={{color:'#d3d3d3'}}>{i.note}</Text>
+        </Body>
         <Right>
           <Text>{i.price}</Text>
+          <Icon  name="cart" onPress={() => props.addItemToCart(i)} />
         </Right>
       </ListItem>
       );
